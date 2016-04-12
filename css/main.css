@@ -53,13 +53,13 @@ ul, ol {
   background:  #085987;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
-.header .ots {
+.header .fdcd {
   display: inline-block;
   width: 184px;
   height: 32px;
   overflow: hidden;
   text-indent: 101%;
-  background: url('../assets/images/lg_opentechschool.png') 0 50% no-repeat;
+  background: url('../assets/images/lg_foodandcode.png') 0 50% no-repeat;
 }
 .header a {
   color: #C1D5E1;
