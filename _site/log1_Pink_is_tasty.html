@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Oh my god this is Yummy.</title>
+        <base href="/" />
+        
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/monokai_sublime.css">
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+        <script src="/js/highlight.pack.js"></script>
+        <script src="/js/perso.js"></script>
+        <script> hljs.configure({tabReplace: '    '}); hljs.initHighlightingOnLoad();</script>
+    </head>
+
+
+    <body>
+
+        <!-- Header -->
+        <div class="header">
+            <a class="fdcd" href="http://www.foodandcode.com">Food&Code</a>
+            <a href="/" id="titleHeader"> Food&Code Workshop</a>
+        </div>
+      
+        <!-- Middle part -->
+        <div class="site">
+            <h1 class="title">Oh my god this is Yummy.</h1>
+            <hr />
+
+	<!-- Left menu-->
+        <div class="aside" id="p_menu">
+            <a href="/">Home</a>
+            <ul>
+                                    
+                    <li><a href="/log0_Starters">log_1 Kiss me, I'm the cook</a></li>
+                    
+                    <li><a href="/log2_FryingPan">log_1 Brain-plosion</a></li>
+                            
+                    <li><a href="/log1_Pink_is_tasty">log_2 Oh my god this is Yummy.</a></li>
+                                                                              
+            </ul>
+
+            <a href="/about.html">About</a>
+	    <center><hr width="60%"/></center>
+            <p class="madeBy">
+                Course by  for <a href="http://www.foodandecode.com">Food&Code</a>
+            </p>
+        </div>
+
+	<!-- Contect of the page (from Markdown files) -->
+        <div class="main" id="p_content">
+            <p>NEED TO ADD: potential pictures, potential inner code, potential part of code to use in the playground.</p>
+
+<h2 id="your-plate-as-a-canvas">0) Your plate as a canvas</h2>
+
+<ul>
+  <li>Getting your setup done.</li>
+</ul>
+
+<pre><code class="language-html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;p5js Template&lt;/title&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+       
+     /*FEEED ME*/ 
+
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<ul>
+  <li>Your first output: 2D visuals. HelloWorld of graphic.</li>
+  <li>Where you place the code: understanding what you’re cooking</li>
+  <li>A bit about compiling, hot reloading, and MF sliders</li>
+</ul>
+
+<pre><code class="language-javascript">        function setup() {
+            createCanvas(windowWidth-20, windowHeight-20);
+            rect(100,100,100,100);
+          }
+</code></pre>
+
+<h2 id="show-me-the-goods">1) Show me the goods!</h2>
+<ul>
+  <li>learning about 2D shapes</li>
+  <li>comments are fun (and usefull)</li>
+</ul>
+
+<pre><code class="language-javascript">    // Add in Setup:
+    ellipse(300, 300, 100, 50); // How would you make a circle ?
+    line(30, 20, 85, 75);
+    // Heard of Bezier curves? You can use it too! But it's a secret...
+
+    // Need complexe shape? Ask us, we'll use vertex
+</code></pre>
+
+<ul>
+  <li>Base of color arrangement.</li>
+</ul>
+
+<pre><code class="language-javascript">      // Filling the space
+      noStroke();
+      fill(255,255,0);  rect(100,100,20,20);
+      fill(0,255,255);  rect(140,100,20,20);
+      fill(255,0,255);  rect(180,100,20,20);
+
+      // Stroke around the space
+      stroke(255,0,0);
+      fill(0,0,0);       rect(100,140,20,20);
+      fill(255,255,255); rect(140,140,20,20);
+      fill(0,255,0);     rect(180,140,20,20);
+
+      // Transparency
+      noStroke();
+      fill(255,255,0, 100);  rect(130,185,20,20);
+      fill(0,255,255, 100);  rect(140,180,20,20);
+      fill(255,0,255, 100);  rect(150,175,20,20);
+
+
+      // Vectoriel Vs tint area
+      // Know about other coloring space? You can use them too, just ask us.
+</code></pre>
+
+<h2 id="static-is-boring-when-a-default-choice">2) Static is boring (when a default choice)</h2>
+
+<ul>
+  <li>Not just a static canvas, but a dynamic one</li>
+</ul>
+
+<pre><code class="language-javascript">    void setup() {
+        // bla bla bla
+    }
+
+    void draw() {
+        fill(255,0,0,3);
+        ellipse(300,300,250,250); // Comment / Uncomment this line
+    }
+</code></pre>
+
+<ul>
+  <li>Dynamic is possible, but .. still needs to be done</li>
+  <li>
+    <p>Many ways, rules, generation, interaction….</p>
+  </li>
+  <li>Interaction, variable</li>
+</ul>
+
+<pre><code class="language-javascript">    ellipse(mouseX, mouseY, 50,50);
+</code></pre>
+
+<pre><code class="language-javascript">    ellipse(width/2, height/2, mouseX, mouseY);
+</code></pre>
+
+<ul>
+  <li>Feed non user information, generative (based on data, later, or … other)</li>
+</ul>
+
+<pre><code class="language-javascript">    rect(random(width)-25, random(height)-25, 50, 50);
+</code></pre>
+
+<pre><code>* Draw a lot, add transparency
+* Static/Dynamic, Generatif/Interactive: randomness
+* Position is the default control. Don't forget other parametrs. Try random colors, size....
+</code></pre>
+
+<ul>
+  <li>We’ll add a lot of possibilities, not all are to be forced (especially not at once!) chosing among your tools will be one hell of a task.</li>
+</ul>
+
+<h2 id="even-stupid-is-already-a-bit-intelligent">3) Even stupid is already a bit intelligent</h2>
+<ul>
+  <li>You did already the brain part : connecting the dots. Routing.</li>
+  <li>Routing, good way to test simple stuff. Direct expression.</li>
+  <li>
+    <p>Direct things are too … direct. Lack poesie, lack the fuzzyness that forces us to interpret and project. We project personal stuff, this is why good fuzzyness will trigger personal projection, and we’ll see a personal connexion with the piece.</p>
+  </li>
+  <li>Guess what? You could stop there. The emphasis should never be too much put on skills. It’s never the end game. It’s not even the resulting art piece. It’s what the spectator will feel. Discovering skills are an amzing way to get inspiration. But never forget that there is a hand that guides all this movement toward creation.</li>
+</ul>
+
+
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+          <p>©  <a href="http://www.foodandcode.com">Food&Code</a> || Licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+          </p>
+      </div>
+
+  </body>
+
+</html>
+

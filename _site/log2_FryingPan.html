@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Brain-plosion</title>
+        <base href="/" />
+        
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/monokai_sublime.css">
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+        <script src="/js/highlight.pack.js"></script>
+        <script src="/js/perso.js"></script>
+        <script> hljs.configure({tabReplace: '    '}); hljs.initHighlightingOnLoad();</script>
+    </head>
+
+
+    <body>
+
+        <!-- Header -->
+        <div class="header">
+            <a class="fdcd" href="http://www.foodandcode.com">Food&Code</a>
+            <a href="/" id="titleHeader"> Food&Code Workshop</a>
+        </div>
+      
+        <!-- Middle part -->
+        <div class="site">
+            <h1 class="title">Brain-plosion</h1>
+            <hr />
+
+	<!-- Left menu-->
+        <div class="aside" id="p_menu">
+            <a href="/">Home</a>
+            <ul>
+                                    
+                    <li><a href="/log0_Starters">log_1 Kiss me, I'm the cook</a></li>
+                    
+                    <li><a href="/log2_FryingPan">log_1 Brain-plosion</a></li>
+                            
+                    <li><a href="/log1_Pink_is_tasty">log_2 Oh my god this is Yummy.</a></li>
+                                                                              
+            </ul>
+
+            <a href="/about.html">About</a>
+	    <center><hr width="60%"/></center>
+            <p class="madeBy">
+                Course by  for <a href="http://www.foodandecode.com">Food&Code</a>
+            </p>
+        </div>
+
+	<!-- Contect of the page (from Markdown files) -->
+        <div class="main" id="p_content">
+            <h2 id="the-big-three-of-our-graphic">1) The big three of (our) graphic</h2>
+<pre><code>* **Vertex**, wireframe, super super duper nice
+* Tint area. super super duper...
+* Both of those are "vectorial graphics"
+* Now: **Pixel** (photo, JPEG...) 
+</code></pre>
+
+<ul>
+  <li>What was there before there was anything?</li>
+  <li>Something before setup, preload</li>
+</ul>
+
+<pre><code class="language-javascript">    function preload() {
+        img = loadImage("http://foodandcode.github.io/assets/images/footer_back.png");
+    }
+
+    function setup() {
+        //bla bla bla
+        image(img,0,0,400,200);
+    }
+</code></pre>
+
+<pre><code>* everything you learn one thing can be reuse for the other. It's cooking. Let's mix. There is no food poisining to worry here.
+
+* Reusing random, and needing transparency
+</code></pre>
+
+<pre><code class="language-javascript">    tint(255,255,255,10); // Color, so plays like stroke and fill
+    image(img,random(width)-100, random(height)-50, 200, 100);
+</code></pre>
+<pre><code>* Try instead to control it with the mouse.
+</code></pre>
+
+<h2 id="animation">2) Animation</h2>
+<p>Brain   - Animation (sinus?) (millis())
+  * a) constrained by time
+    millis(); cos?sin?</p>
+
+<ul>
+  <li>b) constrained by your brain
+variable, evolution</li>
+</ul>
+
+<h2 id="press-that-button">3) Press that button</h2>
+<ul>
+  <li>Arcade buttons, mother of most interactions. It’s child: the keyboard.</li>
+  <li>It’s other child: all devices that are felt as one: foot pedal, makey makey…)</li>
+  <li>Use them. Like, now.</li>
+</ul>
+
+<p>if/then, keyPressed, keycodes</p>
+
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+          <p>©  <a href="http://www.foodandcode.com">Food&Code</a> || Licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+          </p>
+      </div>
+
+  </body>
+
+</html>
+
