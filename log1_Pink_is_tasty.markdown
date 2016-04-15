@@ -122,6 +122,8 @@ NEED TO ADD: potential pictures, potential inner code, potential part of code to
 
  * We'll add a lot of possibilities, not all are to be forced (especially not at once!) chosing among your tools will be one hell of a task.
 
+ * Adding the "phase out" when rect(0,0,width,height) with high transparency
+
 ## 3) Even stupid is already a bit intelligent
  * You did already the brain part : connecting the dots. Routing.
  * Routing, good way to test simple stuff. Direct expression.
