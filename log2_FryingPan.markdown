@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Brain-plosion"
-num: 1
+num: 2
 ---
 
 ## 1) The big three of (our) graphic
