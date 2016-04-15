@@ -4,11 +4,10 @@ title:  "Another Dimension"
 num: 5
 ---
 
-Page 4: 3D and natural randomness
-Output - Forme 3D.
-Multi agent system
-Input    - Mic
-Tech     - camera, translate, rotate
-Liste Figure    -
-Liste Foldable - 
-Liste Code -
+
+## 1) Let's explore space
+ * camera, translate, rotate
+
+
+## 2) If you scream loud enough, people can actually hear you in space.
+ *Mic
