@@ -33,6 +33,7 @@ num: 3
     tint(255,255,255,10); // Color, so plays like stroke and fill
     image(img,random(width)-100, random(height)-50, 200, 100);
 ```
+
     * Try instead to control it with the mouse.
 
 
@@ -108,36 +109,29 @@ Brain   - Animation (sinus?) (millis())
   * try to do that in 2D
   *  variables offers you more control over what you want to do. For animations, and ... more more things.
 
-```
-
-
 ## 4) Press that button
   * Arcade buttons, mother of most interactions. It's child: the keyboard.
   * It's other child: all devices that are felt as one: foot pedal, makey makey...)
   * Use them. Like, now.
 
-  * keyCodes: https://p5js.org/reference/#/p5/keyCode 
 ```javascript
 // NOT WORKING, check disparities between keyPressed and keyTyped
 // Check too when actualy this is called. Seems hard to display something from the function
 
-
-    function keyTyped() {
-      
+   function keyPressed() {
       if (keyCode === LEFT_ARROW) {
-        background(255,255,255);
-         myVar = 100;
-        }
-      
-      rect(10,10,100,100);
-        if (key === 'a') {
-            myVar= width/2;
-        } else if (key === 'b') {
-            fill(255,0,0,200)
-        rect(0,0,width, height);
+         background(255,random(255), 255);
+            //keyCodes: https://p5js.org/reference/#/p5/keyCode 
       }
-  // uncomment to prevent any default behavior
-   return false;
+  }
+
+   function keyTyped() {
+      if (key === 'a') {
+         background(255,0, 255);
+      } else if (key === 'b') {
+         background(255,255, 255);
+      }
+
 }
 ```
 
