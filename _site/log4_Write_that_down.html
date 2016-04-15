@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>About</title>
+        <title>Food for thought</title>
         <base href="/" />
         
         <link rel="stylesheet" href="/css/main.css" />
@@ -25,7 +25,7 @@
       
         <!-- Middle part -->
         <div class="site">
-            <h1 class="title">About</h1>
+            <h1 class="title">Food for thought</h1>
             <hr />
 
 	<!-- Left menu-->
@@ -58,21 +58,65 @@
 
 	<!-- Contect of the page (from Markdown files) -->
         <div class="main" id="p_content">
-            If you're here, you might already know a bit about Food&Code, if not, let me refresh you a little bit.
+            <h1 id="this-course-is-made-with-words">1) This course is made with words</h1>
 
-Bla bla bla bla
+<ul>
+  <li>Powerful medium to share, graphicaly and semanticaly</li>
+</ul>
 
-You can found more info here & here...
+<p>text(“word”, 10, 30);</p>
 
+<ul>
+  <li>
+    <p>Formating
+textSize(12);
+textStyle(NORMAL); // BOLD, ITALIC
+texAlign(CENTER); //LEFT, RIGHTo
+textWidth(“???”)</p>
+  </li>
+  <li>
+    <p>Fonts</p>
+  </li>
+</ul>
 
-Now, a little bit about the authors:
+<p>var fontRegular, fontItalic, fontBold;
+function preload() {
+   fontRegular = loadFont(“assets/Regular.otf”);
+   fontItalic = loadFont(“assets/Italic.ttf”);
+   fontBold = loadFont(“assets/Bold.ttf”);
+}
+function setup() {
+   background(210);
+   fill(0).strokeWeight(0).textSize(10);
+   textFont(fontRegular);
+   text(“Font Style Normal”, 10, 30);
+   textFont(fontItalic);
+   text(“Font Style Italic”, 10, 50);
+   textFont(fontBold);
+   text(“Font Style Bold”, 10, 70);
+}</p>
 
-<br/>
-<br/>
-<p>
+<ul>
+  <li>
+    <p>randomText</p>
+  </li>
+  <li>
+    <p>Moving text</p>
+  </li>
+  <li>
+    <p>Explosions</p>
+  </li>
+  <li>
+    <p>concatenation/split</p>
+  </li>
+</ul>
 
+<h2 id="feed-on-the-web">2) Feed on the web</h2>
+<pre><code>* Input    - data from the web + more random.
 
-</p>
+for each, array, LoadJSon/httpGet
+JSON
+</code></pre>
 
         </div>
 

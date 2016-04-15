@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Brain-plosion"
-num: 2
+num: 3
 ---
 
 ## 1) The big three of (our) graphic
@@ -108,10 +108,10 @@ Brain   - Animation (sinus?) (millis())
   * try to do that in 2D
   *  variables offers you more control over what you want to do. For animations, and ... more more things.
 
-  * Fun with math: max, min, map, abs, randomGaussian
-!!CODE HERE?!?!
+```
 
-## 3) Press that button
+
+## 4) Press that button
   * Arcade buttons, mother of most interactions. It's child: the keyboard.
   * It's other child: all devices that are felt as one: foot pedal, makey makey...)
   * Use them. Like, now.
