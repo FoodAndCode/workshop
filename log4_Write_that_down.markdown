@@ -4,7 +4,7 @@ title:  "Food for thought"
 num: 5
 ---
 
-# 1) This course is made with words
+## 1) This course is made with words
 
  * Powerful medium to share, graphicaly and semanticaly
 
