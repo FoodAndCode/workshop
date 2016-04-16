@@ -115,9 +115,6 @@ Brain   - Animation (sinus?) (millis())
   * Use them. Like, now.
 
 ```javascript
-// NOT WORKING, check disparities between keyPressed and keyTyped
-// Check too when actualy this is called. Seems hard to display something from the function
-
    function keyPressed() {
       if (keyCode === LEFT_ARROW) {
          background(255,random(255), 255);
