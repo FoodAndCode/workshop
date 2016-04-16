@@ -32,27 +32,25 @@
         <div class="aside" id="p_menu">
             <a href="/">Home</a>
             <ul>
-                                          
+                                        
                     <li><a href="/log0_Starters">log_1 Kiss me, I'm the cook</a></li>
-                                      
+                                    
                     <li><a href="/log1_Pink_is_tasty">log_2 Oh my god this is Yummy.</a></li>
-                                      
+                                    
                     <li><a href="/log2_FryingPan">log_3 Brain-plosion</a></li>
-                                      
+                                    
                     <li><a href="/log3_vector_everywhere">log_4 Vector Everywhere</a></li>
-                                      
+                                    
                     <li><a href="/log4_Write_that_down">log_5 Food for thought</a></li>
-                  
-                    <li><a href="/log6_another_dimension">log_5 Another Dimension</a></li>
-                                                                                                  
-                    <li><a href="/ref">log_9 Starters</a></li>
-                  
+                                    
+                    <li><a href="/log5_another_dimension">log_6 Another Dimension</a></li>
+                                                      
             </ul>
 
             <a href="/about.html">About</a>
 	    <center><hr width="60%"/></center>
             <p class="madeBy">
-                Course by  for <a href="http://www.foodandecode.com">Food&Code</a>
+                Course by  for <a href="http://www.foodandcode.com">Food&Code</a>
             </p>
         </div>
 
@@ -88,6 +86,7 @@
 <pre><code class="language-javascript">    tint(255,255,255,10); // Color, so plays like stroke and fill
     image(img,random(width)-100, random(height)-50, 200, 100);
 </code></pre>
+
 <pre><code>* Try instead to control it with the mouse.
 </code></pre>
 
@@ -170,35 +169,30 @@
   <li>variables offers you more control over what you want to do. For animations, and … more more things.</li>
 </ul>
 
-<pre><code>
+<h2 id="press-that-button">4) Press that button</h2>
+<ul>
+  <li>Arcade buttons, mother of most interactions. It’s child: the keyboard.</li>
+  <li>It’s other child: all devices that are felt as one: foot pedal, makey makey…)</li>
+  <li>Use them. Like, now.</li>
+</ul>
 
-## 4) Press that button
-  * Arcade buttons, mother of most interactions. It's child: the keyboard.
-  * It's other child: all devices that are felt as one: foot pedal, makey makey...)
-  * Use them. Like, now.
-
-  * keyCodes: https://p5js.org/reference/#/p5/keyCode 
-```javascript
-// NOT WORKING, check disparities between keyPressed and keyTyped
+<pre><code class="language-javascript">// NOT WORKING, check disparities between keyPressed and keyTyped
 // Check too when actualy this is called. Seems hard to display something from the function
 
-
-    function keyTyped() {
-      
+   function keyPressed() {
       if (keyCode === LEFT_ARROW) {
-        background(255,255,255);
-         myVar = 100;
-        }
-      
-      rect(10,10,100,100);
-        if (key === 'a') {
-            myVar= width/2;
-        } else if (key === 'b') {
-            fill(255,0,0,200)
-        rect(0,0,width, height);
+         background(255,random(255), 255);
+            //keyCodes: https://p5js.org/reference/#/p5/keyCode 
       }
-  // uncomment to prevent any default behavior
-   return false;
+  }
+
+   function keyTyped() {
+      if (key === 'a') {
+         background(255,0, 255);
+      } else if (key === 'b') {
+         background(255,255, 255);
+      }
+
 }
 </code></pre>
 

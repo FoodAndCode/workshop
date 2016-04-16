@@ -32,27 +32,25 @@
         <div class="aside" id="p_menu">
             <a href="/">Home</a>
             <ul>
-                                          
+                                        
                     <li><a href="/log0_Starters">log_1 Kiss me, I'm the cook</a></li>
-                                      
+                                    
                     <li><a href="/log1_Pink_is_tasty">log_2 Oh my god this is Yummy.</a></li>
-                                      
+                                    
                     <li><a href="/log2_FryingPan">log_3 Brain-plosion</a></li>
-                                      
+                                    
                     <li><a href="/log3_vector_everywhere">log_4 Vector Everywhere</a></li>
-                                      
+                                    
                     <li><a href="/log4_Write_that_down">log_5 Food for thought</a></li>
-                  
-                    <li><a href="/log6_another_dimension">log_5 Another Dimension</a></li>
-                                                                                                  
-                    <li><a href="/ref">log_9 Starters</a></li>
-                  
+                                    
+                    <li><a href="/log5_another_dimension">log_6 Another Dimension</a></li>
+                                                      
             </ul>
 
             <a href="/about.html">About</a>
 	    <center><hr width="60%"/></center>
             <p class="madeBy">
-                Course by  for <a href="http://www.foodandecode.com">Food&Code</a>
+                Course by  for <a href="http://www.foodandcode.com">Food&Code</a>
             </p>
         </div>
 
@@ -61,37 +59,215 @@
             <h2 id="a-line-a-triangle-a-sphere-vectors">1) A line, a triangle, a sphere… vectors</h2>
 
 <ul>
-  <li>Definition of a vector</li>
+  <li>Definition of a vector
+    <ul>
+      <li>
+        <p>Scalar Vs Vector.</p>
+      </li>
+      <li>
+        <p>Scalar 
+```javascript
+var x;</p>
+      </li>
+    </ul>
+
+    <p>function setup() {
+    createCanvas(windowWidth-20, windowHeight-20);
+    noStroke();
+    x = width/2; // Initialisation
+}</p>
+
+    <p>function draw() {
+            background(0,0,255);
+    x = x + random(-20,20); // Update
+            fill(255,255,255);
+    rect(x, 100, 40, 40); // Usage
+}
+```</p>
+
+    <ul>
+      <li>Vector</li>
+    </ul>
+  </li>
+</ul>
+
+<pre><code class="language-javascript">    var vec;
+    
+    function setup() {
+        createCanvas(windowWidth-20, windowHeight-20);
+        noStroke();
+        vec = createVector(width/2, height/2);
+    }
+
+    function draw() {
+        background(0,0,255);
+        var vecAdd = createVector(random(-20,20), random(-20,20));
+        vec.add(vecAdd);
+      
+        fill(255,255,255);
+        rect(vec.x, vec.y, 40, 40); // Usage
+    }
+</code></pre>
+
+<pre><code>* Vector are ways to handle more information at once. Sameish behaviour for third dimension.
+
+* A lot of subfunctions: https://p5js.org/reference/#/p5.Vector
+</code></pre>
+
+<ul>
   <li>Fun with math: max, min, map, abs, randomGaussian
 !!CODE HERE?!?!</li>
 </ul>
 
 <h2 id="natural-behavior">2) Natural Behavior</h2>
+
+<ul>
+  <li>Random is a bit too violent, because chose with same chance strong values and soft values. Another random can be “smoother”: gaussian random. Basicaly, you chose a center for randomness, and a span: how much you want to focus on the centre, or spread far.</li>
+</ul>
+
+<pre><code class="language-javascript">        var vecAdd = createVector(randomGaussian(0,3), randomGaussian(0,3));
+</code></pre>
+
 <ul>
   <li>Inputs are orders.</li>
-  <li>Natural structures are appeasing and nice to the eye, and as such a good inspiration</li>
-  <li>
-    <p>Orders in natures are forces. And physic tells us that it’s link with acceleration</p>
+  <li>Natural structures are appeasing and nice to the eye, and as such a good inspiration
+    <ul>
+      <li>The physical world’s movements are regulated by forces. Would you know they are present or not, your perception of the world and expectations of movement are modeled by them. Hence why it’s nice to take them as inspiration, using the same vocabulary and set of rules than natural life.</li>
+      <li>Look mom I’m doing science : Sum of Forces = mass * acceleration. (As true as simple)</li>
+    </ul>
   </li>
   <li>
-    <p>Previous code was ‘ordered’ in position.</p>
+    <p>Previous code was ‘ordered’ in position, and we see here we should order it in “acceleration”. But what exactly is acceleration? First, think of a car… or a stone you’d drop.</p>
   </li>
   <li>Speed = what you add in position at each steps. The bigger the speed, the further you’ll go.</li>
   <li>Acceleration = what you add to speed at each steps. The bigger the acceleration, the quicker you’ll go.</li>
 </ul>
 
-<pre><code class="language-javascript">    var p, s, a; // position, speed, acceleration
-
+<pre><code class="language-javascript">    var vecP, vecS, vecA;
+    
     function setup() {
-        p = 0;
-        
-
+      createCanvas(windowWidth-20, windowHeight-20);
+      
+      noStroke();
+      fill(255,255,255);
+      
+      vecP = createVector(width/2, height/2);
+      vecS = createVector(0,0);
+      vecA = createVector(0,0);
     }
 
+    function draw() {
+      background(0);
 
+      // We start with no forces
+      var sumF = createVector(0,0);
+      // We add a random force
+      sumF.add( createVector(randomGaussian(0,3)/10,
+                             randomGaussian(0,3)/10) );
+            
+      // Acceleration, we command you!
+      vecA = sumF;
+      // Set of rules, update
+      vecS.add(vecA);
+      vecP.add(vecS);
 
+      
+      // Usage, ta-dah!
+      rect(vecP.x, vecP.y, 40, 40); // Usage
+    }     
 </code></pre>
 
+<ul>
+  <li>Set of rules as instrument of music</li>
+  <li>Easy to compose with, assured of coherency and genericity</li>
+  <li>
+    <p>Easy to upgrade, to tweak with, to work from</p>
+  </li>
+  <li>Let’s add different forces!</li>
+  <li>First, we see that our shape gets out of the screen.</li>
+  <li>We can force it back (change speed with “if” on the edges). But that are limit cases, better to keep a coherent system</li>
+  <li>So the answer is a force. That goes toward the center. Goes stronger as you go further.</li>
+</ul>
+
+<pre><code class="language-javascript">    // Attraction toward the center
+    sumF.add( createVector( (width/2-vecP.x)/5000, (height/2-vecP.y)/5000) );
+</code></pre>
+
+<ul>
+  <li>Basicaly, we created a attraction force toward a dot (like gravitation).</li>
+  <li>We can make the reference dot whichever we want (like … a mouse :p)</li>
+</ul>
+
+<pre><code class="language-javascript">    var planet_A;
+
+    planet_A = createVector(random(width/3, 2*width/3),
+                              random(height/3, 2*height/3));
+
+    // Planetary attraction
+    sumF.add( createVector( (planet_A.x-vecP.x)/2000, (planet_A.y-vecP.y)/2000) );
+
+    ellipse(planet_A.x, planet_A.x, 40, 40);
+</code></pre>
+
+<ul>
+  <li>Try starting with a default speed for planetary like motions :D (and play with transparency, your best friend)</li>
+</ul>
+
+<h2 id="in-search-of-simplicity">3) In search of simplicity</h2>
+
+<ul>
+  <li>To compute is to order, to make generic rules over generic structure</li>
+  <li>We came from scalar to vector. It was easier to handle multiple dimensions</li>
+  <li>It’d be nice to set everything (pos, speed, acc) in one object. Easier to manipulate</li>
+</ul>
+
+<pre><code class="language-javascript">var part;
+      
+    function setup() {
+      createCanvas(windowWidth-20, windowHeight-20);
+        background(0);
+      part = {};
+      
+      noStroke();
+      fill(255,255,255, 20); 
+      planet_A = createVector(random(width/3, 2*width/3),
+                              random(height/3, 2*height/3));
+            part.p = createVector(width/4, height/4);
+      part.s = createVector(4,0);
+      part.a = createVector(0,0);
+    }
+
+    function draw() {
+     
+      // Definition of the forces
+      var sumF = createVector(0,0);
+      sumF.add( createVector(randomGaussian(0,3)/30,
+                             randomGaussian(0,3)/30) );
+            sumF.add( createVector( (width/2-part.p.x)/5000, (height/2-part.p.y)/5000) );
+            
+            
+      // Acceleration, we command you!
+      part.a = sumF;
+      // Set of rules, update
+      part.s.add(part.a);
+            part.p.add(part.s);
+      
+      // Usage, ta-dah!
+      rect(part.p.x, part.p.y, 40, 40); // Usage
+      
+    }     
+</code></pre>
+
+<h2 id="in-search-of-multiplicity">4) In search of multiplicity</h2>
+
+<ul>
+  <li>Simplify what you have, it gets easier to grow from</li>
+</ul>
+
+<pre><code class="language-javascript">// Check for array
+// Check for "push"
+// Check for "foreach"
+</code></pre>
 
         </div>
 

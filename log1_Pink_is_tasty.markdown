@@ -124,7 +124,14 @@ NEED TO ADD: potential pictures, potential inner code, potential part of code to
 
  * Adding the "phase out" when rect(0,0,width,height) with high transparency
 
-## 3) Even stupid is already a bit intelligent
+## 3) Look at your watch, it's time to be a pro
+Yep, already. "Time flies like an arrow. Fruit flies like a banana." Anyway.
+
+    * NoCursor()
+    * fullscreen
+    * Bam, give me your money
+
+## 4) Even stupid is already a bit intelligent
  * You did already the brain part : connecting the dots. Routing.
  * Routing, good way to test simple stuff. Direct expression.
  * Direct things are too ... direct. Lack poesie, lack the fuzzyness that forces us to interpret and project. We project personal stuff, this is why good fuzzyness will trigger personal projection, and we'll see a personal connexion with the piece.

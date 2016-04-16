@@ -32,33 +32,31 @@
         <div class="aside" id="p_menu">
             <a href="/">Home</a>
             <ul>
-                                          
+                                        
                     <li><a href="/log0_Starters">log_1 Kiss me, I'm the cook</a></li>
-                                      
+                                    
                     <li><a href="/log1_Pink_is_tasty">log_2 Oh my god this is Yummy.</a></li>
-                                      
+                                    
                     <li><a href="/log2_FryingPan">log_3 Brain-plosion</a></li>
-                                      
+                                    
                     <li><a href="/log3_vector_everywhere">log_4 Vector Everywhere</a></li>
-                                      
+                                    
                     <li><a href="/log4_Write_that_down">log_5 Food for thought</a></li>
-                  
-                    <li><a href="/log6_another_dimension">log_5 Another Dimension</a></li>
-                                                                                                  
-                    <li><a href="/ref">log_9 Starters</a></li>
-                  
+                                    
+                    <li><a href="/log5_another_dimension">log_6 Another Dimension</a></li>
+                                                      
             </ul>
 
             <a href="/about.html">About</a>
 	    <center><hr width="60%"/></center>
             <p class="madeBy">
-                Course by  for <a href="http://www.foodandecode.com">Food&Code</a>
+                Course by  for <a href="http://www.foodandcode.com">Food&Code</a>
             </p>
         </div>
 
 	<!-- Contect of the page (from Markdown files) -->
         <div class="main" id="p_content">
-            <h1 id="this-course-is-made-with-words">1) This course is made with words</h1>
+            <h2 id="this-course-is-made-with-words">1) This course is made with words</h2>
 
 <ul>
   <li>Powerful medium to share, graphicaly and semanticaly</li>
@@ -72,7 +70,8 @@
 textSize(12);
 textStyle(NORMAL); // BOLD, ITALIC
 texAlign(CENTER); //LEFT, RIGHTo
-textWidth(“???”)</p>
+textWidth(“???”)
+Fill, Stroke</p>
   </li>
   <li>
     <p>Fonts</p>
@@ -98,25 +97,46 @@ function setup() {
 
 <ul>
   <li>
-    <p>randomText</p>
+    <p>randomText
+ Array + Random index (float -&gt; int)</p>
   </li>
   <li>
-    <p>Moving text</p>
+    <p>Moving text
+```javascript
+ var part;</p>
+
+    <p>function setup() {
+   createCanvas(windowWidth-20, windowHeight-20);
+     background(0);
+   part = {};
+   part.x = random(100000);
+   part.y = random(100000);
+ }</p>
+
+    <p>function draw() {
+   noStroke();
+   fill(255,40);
+   part.x+=0.01; part.y+=0.01;
+   textFont(“Verdana”, 30);
+   text(“Here”,  noise(part.x+10)<em>width,noise(part.y+10)</em>height);<br />
+ }   <br />
+```</p>
   </li>
-  <li>
-    <p>Explosions</p>
-  </li>
-  <li>
-    <p>concatenation/split</p>
-  </li>
+  <li>Explosions</li>
+  <li>Same than natural system. Just … Start at the right position, and then apply random forces</li>
 </ul>
 
 <h2 id="feed-on-the-web">2) Feed on the web</h2>
-<pre><code>* Input    - data from the web + more random.
-
-for each, array, LoadJSon/httpGet
-JSON
+<pre><code>* Input    - data from the web 
+* noise (perlin, for .. err ... drawing?)
 </code></pre>
+
+<ul>
+  <li>concatenation/split</li>
+  <li>Manipulation possible on words
+ LoadJSon/httpGet
+ JSON</li>
+</ul>
 
         </div>
 
