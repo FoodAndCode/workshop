@@ -40,6 +40,7 @@ function setup() {
     Array + Random index (float -> int)
 
  * Moving text
+
 ```javascript
     var part;
       
