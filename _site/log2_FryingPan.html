@@ -56,17 +56,19 @@
 
 	<!-- Contect of the page (from Markdown files) -->
         <div class="main" id="p_content">
-            <h2 id="the-big-three-of-our-graphic">1) The big three of (our) graphic</h2>
-<pre><code>* **Vertex**, wireframe, super super duper nice
-* Tint area. super super duper...
-* Both of those are "vectorial graphics"
-* Now: **Pixel** (photo, JPEG...) 
-</code></pre>
-
+            <h2 id="the-big-three-of-our-current-graphic-vocabulary">1) The big three of (our current) graphic vocabulary</h2>
 <ul>
-  <li>What was there before there was anything?</li>
-  <li>Something before setup, preload</li>
+  <li>Using Strokes: <strong>Vertex</strong>, wireframe, super super duper nice</li>
+  <li>Using Fill: <strong>Tint area</strong>. super super duper…</li>
+  <li>Both of could be sum up as “vectorial graphics”</li>
+  <li>Now: <strong>Pixel</strong> (photo, JPEG…)</li>
 </ul>
+
+<p>If you’re asking yourself “what was there before there was anything?”, we have an answer. Before anything, there was the <strong>preload</strong> function, used to not just load, but preload. Who would have guessed. Loading before the setup what you’ll need later, like images.</p>
+
+<p>Images are like rectangles. Once defined, you display them using the <strong>image</strong> function, feeding it positions and size.</p>
+
+<p>Oupsy, while we’ll discuss variables a bit more in depth later, we’ll be already using them now. In the code below, <em>img</em> is a variable. A name, a container, that has some complexe values (which describe the image linked). What we’re doing here is a bit of a shortcut, we’ll see later why.</p>
 
 <pre><code class="language-javascript">    function preload() {
         img = loadImage("http://foodandcode.github.io/assets/images/footer_back.png");
@@ -78,35 +80,38 @@
     }
 </code></pre>
 
-<pre><code>* everything you learn one thing can be reuse for the other. It's cooking. Let's mix. There is no food poisining to worry here.
+<ul>
+  <li>
+    <p>Don’t forget that everything you learn on one thing can (should) be used on another. It’s cooking. Let’s mix. There is no food poisining to worry here.</p>
+  </li>
+  <li>
+    <p>Wondering how to apply the vocabulary of color to a picture? Wonder no more.</p>
+  </li>
+</ul>
 
-* Reusing random, and needing transparency
-</code></pre>
+<p>For that we use the function <strong>tint</strong>. You can feed it a color as you would with fill, stroke or background.</p>
 
 <pre><code class="language-javascript">    tint(255,255,255,10); // Color, so plays like stroke and fill
     image(img,random(width)-100, random(height)-50, 200, 100);
 </code></pre>
 
-<pre><code>* Try instead to control it with the mouse.
+<pre><code>* Try instead to control the color with the graphic tablet.
 </code></pre>
 
 <h2 id="animation">2) Animation</h2>
-<p>Brain   - Animation (sinus?) (millis())
-  * a) constrained by time
-    millis(); cos?sin?</p>
+<p>Another possible brain. We’ll animate our lovely shapes. This animation needs to be described. Two main ways arise:</p>
 
 <ul>
-  <li>We get you default example, better using them on top of something else</li>
-  <li>animation without trace: background</li>
+  <li>a) constrained by time</li>
 </ul>
 
-<pre><code class="language-javascrit">    background(0,0,0);
-    rect(millis()/1000, millis()/500, 50, 50);
-</code></pre>
+<p>We’ll defined a movement using time, more precisely the function <strong>millis</strong> which gives us the number of milliseconds ellapsed. Let’s divide this because it can gets high pretty quickly, and feed that to the position of a rectangle.</p>
 
 <pre><code class="language-javascrit">    background(0,0,0);
     rect(millis()/1000, millis()/500, 50, 50);
 </code></pre>
+
+<p>Ok, this is boring. You’d better use that new power on something more fun.</p>
 
 <ul>
   <li>Remember the dreaded cosinus and sinus?! They are actually pretty fun</li>
@@ -129,16 +134,12 @@
 </code></pre>
 
 <ul>
-  <li>
-    <p>b) constrained by your brain</p>
-  </li>
-  <li>
-    <p>previously the evolution was based on millis. This function would give us a value that would “change” over time, in a coherent and predictable manner: it would rise, and constantly, with time.</p>
-  </li>
-  <li>
-    <p>Same evolution can be redone with more control. For that, we need something that we can control, and make vary. This vessel is called a variable. You already used a few: mouthX, height… Now, it’s time to use your own.</p>
-  </li>
+  <li>b) constrained by your brain</li>
 </ul>
+
+<p>Previously the evolution was based on time. This function would give us a value that would “change” over time, in a coherent and predictable manner: it would rise, and constantly, with time.</p>
+
+<p>Similar evolution can be redone with more control. For that, we need something that we can control, and make vary. This vessel is called a variable. You already used a few: mouthX, height… Now, it’s time to use your own.</p>
 
 <pre><code class="language-javascript">    var myVar; // Definition
 
@@ -171,10 +172,14 @@
 
 <h2 id="press-that-button">4) Press that button</h2>
 <ul>
-  <li>Arcade buttons, mother of most interactions. It’s child: the keyboard.</li>
+  <li>Arcade buttons, mother of most interactions. Its child: the keyboard.</li>
   <li>It’s other child: all devices that are felt as one: foot pedal, makey makey…)</li>
   <li>Use them. Like, now.</li>
 </ul>
+
+<p>Another couple of functions, <strong>keyPressed</strong> &amp; <strong>keyTyped</strong> for classic keys and control keys. But among those function, a most important new keyword: <strong>if</strong>. The base of coputation. Thesis could be written on it, its importance, what it means, what it represents. It’s the atom of the computational world. What it does is test for something, and do one thing if it’s true (and optionaly another if it’s false). This is the basic of artificial reasoning. After the if, a condition is tested among parenthesis, and among curly brackets (as with functions), the block of code needed to be executed. If you want to do something when something is not valid, then use <em>else</em> as done below. You can test many things with conditions. Equality with <em>===</em>, comparison with <em>&lt;</em> and <em>&gt;</em>… many more that we’ll discover another time!</p>
+
+<p>Last: key and keycodes are the value of the key last types. Try it out a bit, it’ll make way more sense that way than reading a wall of text.</p>
 
 <pre><code class="language-javascript">   function keyPressed() {
       if (keyCode === LEFT_ARROW) {
@@ -194,7 +199,7 @@
 </code></pre>
 
 <ul>
-  <li>mouseMoved, mousePressed/released, keyReleased…</li>
+  <li>You can check out (or ask us) about other function involoved with the mouse and keyboard:  <strong>mouseMoved</strong>, <strong>mousePressed</strong>, <strong>mouseReleased</strong>, <strong>keyReleased</strong>…</li>
 </ul>
 
 

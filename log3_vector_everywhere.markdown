@@ -7,10 +7,14 @@ num: 4
 ## 1) A line, a triangle, a sphere... vectors
 
   * Definition of a vector
-    * Scalar Vs Vector.
 
+A vector is a way to represent information. As itself, it's nothing, it's just a modelisation, a choice, a representation. In short, it's meant to simplify your life. Let's see how it does it.
 
-    * Scalar 
+  * Scalar Vs Vector.
+
+A scalar is a simple value. 1; 3.2; -54. A vector is a container of multiple values: (3,4); (-3, 1, 56, 0, 2). Usually it's linked with space, and hence has either two values (x and y, for positioning on a screen for instance) or three values (x,z,y) for handling 3D graphics. 
+
+  * Scalar 
 ```javascript
     var x;
     
@@ -49,14 +53,8 @@ num: 4
     }
 ```
 
-    * Vector are ways to handle more information at once. Sameish behaviour for third dimension.
+  * A lot of subfunctions are here to be used: https://p5js.org/reference/#/p5.Vector
 
-    * A lot of subfunctions: https://p5js.org/reference/#/p5.Vector
-
-
-
-  * Fun with math: max, min, map, abs, randomGaussian
-!!CODE HERE?!?!
 
 ## 2) Natural Behavior
 

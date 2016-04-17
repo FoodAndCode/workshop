@@ -4,14 +4,17 @@ title:  "Brain-plosion"
 num: 3
 ---
 
-## 1) The big three of (our) graphic
-    * **Vertex**, wireframe, super super duper nice
-    * Tint area. super super duper...
-    * Both of those are "vectorial graphics"
-    * Now: **Pixel** (photo, JPEG...) 
+## 1) The big three of (our current) graphic vocabulary
+ * Using Strokes: **Vertex**, wireframe, super super duper nice
+ * Using Fill: **Tint area**. super super duper...
+ * Both of could be sum up as "vectorial graphics"
+ * Now: **Pixel** (photo, JPEG...)
 
- * What was there before there was anything?
- * Something before setup, preload
+If you're asking yourself "what was there before there was anything?", we have an answer. Before anything, there was the **preload** function, used to not just load, but preload. Who would have guessed. Loading before the setup what you'll need later, like images.
+
+Images are like rectangles. Once defined, you display them using the **image** function, feeding it positions and size.
+
+Oupsy, while we'll discuss variables a bit more in depth later, we'll be already using them now. In the code below, *img* is a variable. A name, a container, that has some complexe values (which describe the image linked). What we're doing here is a bit of a shortcut, we'll see later why.
 
 ```javascript
     function preload() {
@@ -25,35 +28,34 @@ num: 3
 ```
 
 
-    * everything you learn one thing can be reuse for the other. It's cooking. Let's mix. There is no food poisining to worry here.
+ * Don't forget that everything you learn on one thing can (should) be used on another. It's cooking. Let's mix. There is no food poisining to worry here.
 
-    * Reusing random, and needing transparency
+ * Wondering how to apply the vocabulary of color to a picture? Wonder no more.
+
+For that we use the function **tint**. You can feed it a color as you would with fill, stroke or background.
 
 ```javascript
     tint(255,255,255,10); // Color, so plays like stroke and fill
     image(img,random(width)-100, random(height)-50, 200, 100);
 ```
 
-    * Try instead to control it with the mouse.
+    * Try instead to control the color with the graphic tablet.
 
 
 ## 2) Animation
-Brain   - Animation (sinus?) (millis())
+Another possible brain. We'll animate our lovely shapes. This animation needs to be described. Two main ways arise:
+
   * a) constrained by time
-    millis(); cos?sin?
 
-  * We get you default example, better using them on top of something else
-  * animation without trace: background
+We'll defined a movement using time, more precisely the function **millis** which gives us the number of milliseconds ellapsed. Let's divide this because it can gets high pretty quickly, and feed that to the position of a rectangle.
 
 ```javascrit
     background(0,0,0);
     rect(millis()/1000, millis()/500, 50, 50);
 ```
 
-```javascrit
-    background(0,0,0);
-    rect(millis()/1000, millis()/500, 50, 50);
-```
+Ok, this is boring. You'd better use that new power on something more fun.
+
 
  * Remember the dreaded cosinus and sinus?! They are actually pretty fun
 
@@ -77,9 +79,9 @@ Brain   - Animation (sinus?) (millis())
 
   * b) constrained by your brain
   
-  * previously the evolution was based on millis. This function would give us a value that would "change" over time, in a coherent and predictable manner: it would rise, and constantly, with time.
+Previously the evolution was based on time. This function would give us a value that would "change" over time, in a coherent and predictable manner: it would rise, and constantly, with time.
 
-  * Same evolution can be redone with more control. For that, we need something that we can control, and make vary. This vessel is called a variable. You already used a few: mouthX, height... Now, it's time to use your own.
+Similar evolution can be redone with more control. For that, we need something that we can control, and make vary. This vessel is called a variable. You already used a few: mouthX, height... Now, it's time to use your own.
 
 ```javascript
     var myVar; // Definition
@@ -107,12 +109,16 @@ Brain   - Animation (sinus?) (millis())
 ```
 
   * try to do that in 2D
-  *  variables offers you more control over what you want to do. For animations, and ... more more things.
+  * variables offers you more control over what you want to do. For animations, and ... more more things.
 
 ## 4) Press that button
-  * Arcade buttons, mother of most interactions. It's child: the keyboard.
+  * Arcade buttons, mother of most interactions. Its child: the keyboard.
   * It's other child: all devices that are felt as one: foot pedal, makey makey...)
   * Use them. Like, now.
+
+Another couple of functions, **keyPressed** & **keyTyped** for classic keys and control keys. But among those function, a most important new keyword: **if**. The base of coputation. Thesis could be written on it, its importance, what it means, what it represents. It's the atom of the computational world. What it does is test for something, and do one thing if it's true (and optionaly another if it's false). This is the basic of artificial reasoning. After the if, a condition is tested among parenthesis, and among curly brackets (as with functions), the block of code needed to be executed. If you want to do something when something is not valid, then use *else* as done below. You can test many things with conditions. Equality with *===*, comparison with *<* and *>*... many more that we'll discover another time!
+
+Last: key and keycodes are the value of the key last types. Try it out a bit, it'll make way more sense that way than reading a wall of text.
 
 ```javascript
    function keyPressed() {
@@ -132,5 +138,5 @@ Brain   - Animation (sinus?) (millis())
 }
 ```
 
-  * mouseMoved, mousePressed/released, keyReleased...
+  * You can check out (or ask us) about other function involoved with the mouse and keyboard:  **mouseMoved**, **mousePressed**, **mouseReleased**, **keyReleased**...
 

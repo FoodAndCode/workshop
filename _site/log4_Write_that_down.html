@@ -101,27 +101,30 @@ function setup() {
  Array + Random index (float -&gt; int)</p>
   </li>
   <li>
-    <p>Moving text
-```javascript
- var part;</p>
-
-    <p>function setup() {
-   createCanvas(windowWidth-20, windowHeight-20);
-     background(0);
-   part = {};
-   part.x = random(100000);
-   part.y = random(100000);
- }</p>
-
-    <p>function draw() {
-   noStroke();
-   fill(255,40);
-   part.x+=0.01; part.y+=0.01;
-   textFont(“Verdana”, 30);
-   text(“Here”,  noise(part.x+10)<em>width,noise(part.y+10)</em>height);<br />
- }   <br />
-```</p>
+    <p>Moving text</p>
   </li>
+</ul>
+
+<pre><code class="language-javascript">    var part;
+      
+    function setup() {
+      createCanvas(windowWidth-20, windowHeight-20);
+        background(0);
+      part = {};
+      part.x = random(100000);
+      part.y = random(100000);
+    }
+
+    function draw() {
+      noStroke();
+      fill(255,40);
+      part.x+=0.01; part.y+=0.01;
+      textFont("Verdana", 30);
+      text("Here",  noise(part.x+10)*width,noise(part.y+10)*height);  
+    }     
+</code></pre>
+
+<ul>
   <li>Explosions</li>
   <li>Same than natural system. Just … Start at the right position, and then apply random forces</li>
 </ul>
