@@ -83,6 +83,8 @@ Ever heard of Red Blue Green, the RGB classics? They're back! Whenever you're sp
 If you know (and prefer) the vocabulary of Hue, Saturation and Value (or luminosity), you can use it too, just ask us (or seek in the reference page).
 
 ```javascript
+    // Beware! Maximum value of color is 255
+
       // Filling the space
       noStroke();
       fill(255,255,0);  rect(100,100,20,20);
