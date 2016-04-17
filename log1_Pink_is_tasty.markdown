@@ -110,11 +110,11 @@ You know already about the setup function, and we won't make modification upon i
 
 
 ```javascript
-    void setup() {
+    function setup() {
         // bla bla bla
     }
 
-    void draw() {
+    function draw() {
         fill(255,0,0,3);
         ellipse(300,300,250,250); // Comment / Uncomment this line
     }
