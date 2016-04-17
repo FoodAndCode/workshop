@@ -194,8 +194,6 @@ var part;
 
   * Simplify what you have, it gets easier to grow from
 
-```javascript
-// Check for array
-// Check for "push"
-// Check for "foreach"
-```
+ * Check for array
+ * Check for "push"
+ * Check for "foreach"

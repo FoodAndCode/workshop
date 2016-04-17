@@ -8,33 +8,21 @@ num: 5
 
  * Powerful medium to share, graphicaly and semanticaly
 
+```javascript
 text("word", 10, 30);
+```
 
  * Formating
+```javascript
 textSize(12);
 textStyle(NORMAL); // BOLD, ITALIC
 texAlign(CENTER); //LEFT, RIGHTo
-textWidth("???")
-Fill, Stroke
+textWidth(32);
+```
 
  * Fonts
 
-var fontRegular, fontItalic, fontBold;
-function preload() {
-   fontRegular = loadFont("assets/Regular.otf");
-   fontItalic = loadFont("assets/Italic.ttf");
-   fontBold = loadFont("assets/Bold.ttf");
-}
-function setup() {
-   background(210);
-   fill(0).strokeWeight(0).textSize(10);
-   textFont(fontRegular);
-   text("Font Style Normal", 10, 30);
-   textFont(fontItalic);
-   text("Font Style Italic", 10, 50);
-   textFont(fontBold);
-   text("Font Style Bold", 10, 70);
-}
+Can use a lot by default (all on your system), can load them online too. Ask us.
 
  * randomText
     Array + Random index (float -> int)
@@ -66,8 +54,8 @@ function setup() {
 
 
 ## 2) Feed on the web
-    * Input    - data from the web 
-    * noise (perlin, for .. err ... drawing?)
+  * Input    - data from the web 
+  * noise (perlin, for .. err ... drawing?)
 
  * concatenation/split
  * Manipulation possible on words

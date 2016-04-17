@@ -39,7 +39,7 @@ For that we use the function **tint**. You can feed it a color as you would with
     image(img,random(width)-100, random(height)-50, 200, 100);
 ```
 
-    * Try instead to control the color with the graphic tablet.
+  * Try instead to control the color with the graphic tablet.
 
 
 ## 2) Animation
